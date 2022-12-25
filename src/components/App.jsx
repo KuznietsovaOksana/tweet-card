@@ -1,16 +1,12 @@
+import { FontStyles } from '../styles/FontStyles';
+import { GlobalStyleComponent } from '../styles/GlobalStyles';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      Test template
-    </div>
+    <>
+      <div>Test template</div>
+      <FontStyles />
+      <GlobalStyleComponent />
+    </>
   );
 };
