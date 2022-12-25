@@ -1,12 +1,13 @@
 import { FontStyles } from '../styles/FontStyles';
 import { GlobalStyleComponent } from '../styles/GlobalStyles';
-import { Button } from './Button/Button.styled';
 import { Container } from './Container/Container.styled';
+// import { Button } from './Button/Button';
+import { User } from './User/User';
 
 export const App = () => {
   return (
     <Container>
-      <Button>Follow</Button>
+      <User />
       <FontStyles />
       <GlobalStyleComponent />
     </Container>

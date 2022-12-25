@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const ButtonFollow = styled.button`
   cursor: pointer;
   display: block;
   margin: 0 auto;
