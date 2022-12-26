@@ -15,7 +15,6 @@ import decorMain from '../../img/decor-main.png';
 // import boy from '../../img/boy.png';
 
 export const User = ({ user, onClick }) => {
-  console.log(user);
   return (
     <UserItem>
       <UserHeader>

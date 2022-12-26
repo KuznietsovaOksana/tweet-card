@@ -42,7 +42,6 @@ export class App extends Component {
   };
 
   render() {
-    console.log(this.state.users);
     const { users } = this.state;
     return (
       <Container>
