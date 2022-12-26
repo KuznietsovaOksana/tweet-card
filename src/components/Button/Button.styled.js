@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+const setBgColor = props => {
+  if (props.children === 'Follow') {
+    return '#EBD8FF';
+  }
+  return '#5CD3A8';
+};
+
 export const ButtonFollow = styled.button`
   cursor: pointer;
   display: block;
@@ -11,15 +18,14 @@ export const ButtonFollow = styled.button`
   line-height: 1.2;
   text-transform: uppercase;
   color: #373737;
-  background-color: #ebd8ff;
+  background-color: ${setBgColor};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   border: transparent;
-  transition: background-color 250ms ease 0s, box-shadow 250ms ease 0s;
-
+  transition: background-color 250ms ease 0s;
+  transition: transform 250ms ease 0s;
   &:hover,
   &:focus {
-    background-color: #d4a4ed;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    transform: scale(1.03);
   }
 `;

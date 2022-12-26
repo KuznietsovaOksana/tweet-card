@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import decorHeart from '../../img/decor-heart.png';
-import decorDots from '../../img/decor-dots.png';
-import decorBubbleHeart from '../../img/decor-bubble_heart.png';
 
 export const UserItem = styled.li`
   flex: 1 0 50%;
@@ -15,21 +12,20 @@ export const UserItem = styled.li`
   );
   box-shadow: -3px 8px 24px rgba(0, 0, 0, 0.23);
   border-radius: 24px;
+  transition: box-shadow 2500ms ease 0s;
+  &:hover,
+  &:focus {
+    box-shadow: -3px 8px 24px rgba(0, 0, 0, 0.6);
+    img {
+      transform: scale(1.03);
+    }
+  }
 `;
 
 export const UserHeader = styled.div`
   position: relative;
   padding-top: 38px;
   min-height: 251px;
-  &: after {
-    content: '';
-    position: absolute;
-    background: url(${decorHeart});
-    top: 182px;
-    right: 68px;
-    width: 44px;
-    height: 46px;
-  }
 `;
 
 export const Logo = styled.img`
@@ -37,32 +33,20 @@ export const Logo = styled.img`
   top: 24px;
   left: 24px;
   width: 88px;
+  transform: scale(1);
+  transition: transform 250ms ease 0s;
 `;
 
 export const DecorMain = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 226px;
-  height: 152px;
+  width: 357px;
+  height: 194px;
   fit-contain: cover;
-  &: before {
-    content: '';
-    position: absolute;
-    top: 146px;
-    left: -62px;
-    background: url(${decorDots});
-    width: 56px;
-    height: 48px;
-  }
-  &: after {
-    content: '';
-    position: absolute;
-    background: url(${decorBubbleHeart});
-    top: -4px;
-    left: 256px;
-    width: 39px;
-    height: 47px;
+  & img {
+    transform: scale(1);
+    transition: transform 250ms ease 0s;
   }
 `;
 
@@ -111,6 +95,8 @@ export const Avatar = styled.img`
   border-radius: 50%;
   background-color: #5736a3;
   object-fit: cover;
+  transform: scale(1);
+  transition: transform 250ms ease 0s;
 `;
 
 export const UserInfo = styled.ul`

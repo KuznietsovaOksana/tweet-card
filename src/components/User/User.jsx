@@ -12,7 +12,6 @@ import {
 } from './User.styled';
 import logo from '../../img/logo.svg';
 import decorMain from '../../img/decor-main.png';
-// import boy from '../../img/boy.png';
 
 export const User = ({ user, onClick }) => {
   return (
@@ -20,7 +19,7 @@ export const User = ({ user, onClick }) => {
       <UserHeader>
         <Logo src={logo} alt="GoIT logo" />
         <DecorMain>
-          <img src={decorMain} alt="Card" />
+          <img src={decorMain} alt="Decor" />
         </DecorMain>
       </UserHeader>
       <UserData>
