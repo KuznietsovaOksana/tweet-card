@@ -4,7 +4,8 @@ import decorDots from '../../img/decor-dots.png';
 import decorBubbleHeart from '../../img/decor-bubble_heart.png';
 
 export const UserItem = styled.li`
-  width: 454px;
+  flex: 1 0 50%;
+  max-width: 454px;
   height: 547px;
   background: linear-gradient(
     114.99deg,
