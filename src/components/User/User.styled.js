@@ -24,7 +24,9 @@ export const UserItem = styled.li`
 
 export const UserHeader = styled.div`
   position: relative;
-  padding-top: 38px;
+  padding-top: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
   min-height: 251px;
 `;
 
@@ -41,7 +43,7 @@ export const DecorMain = styled.div`
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  width: 357px;
+  max-width: 357px;
   height: 194px;
   fit-contain: cover;
   & img {
