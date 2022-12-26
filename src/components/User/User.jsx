@@ -34,13 +34,7 @@ export const User = ({ user, onClick }) => {
             {user.followers.toLocaleString('en-US')} followers
           </UserText>
         </UserInfo>
-        <Button
-          type="button"
-          onClick={() => onClick(user.id)}
-          style={{ backgroundColor: user.isFollowing ? '#5CD3A8' : '#ebd8ff' }}
-        >
-          {user.isFollowing ? 'Following' : 'Follow'}
-        </Button>
+        <Button user={user} onClick={onClick} />
       </UserData>
     </UserItem>
   );

@@ -10,44 +10,24 @@ export class App extends Component {
     users: users.map(user => {
       return { ...user, isFollowing: false };
     }),
+    isFollowing: '',
   };
 
-  // componentDidMount() {
-  //   const parsedUsers = JSON.parse(localStorage.getItem('users'));
-  //   if (parsedUsers) {
-  //     this.setState({ users: parsedUsers });
-  //   }
-  // }
-  // componentDidUpdate(_, prevState) {
-  //   if (prevState.users !== this.setState.users) {
-  //     localStorage.setItem('users', JSON.stringify(this.state.users));
-  //   }
-  // }
-
-  // onToggle = id => {
-  //   this.setState(prevState => {
-  //     return {
-  //       users: prevState.users.map(user => {
-  //         console.log(user);
-  //         if (user.id === id) {
-  //           const following = !user.isFollowing;
-  //           console.log(following);
-  //           return {
-  //             ...user,
-  //             isFollowing: following,
-  //             followers: following ? user.followers + 1 : user.followers - 1,
-  //           };
-  //         }
-  //         return user;
-  //       }),
-  //     };
-  //   });
-  // };
+  componentDidMount() {
+    const parsedUsers = JSON.parse(localStorage.getItem('users'));
+    if (parsedUsers) {
+      this.setState({ users: parsedUsers });
+    }
+  }
+  componentDidUpdate(_, prevState) {
+    if (prevState.users !== this.setState.users) {
+      localStorage.setItem('users', JSON.stringify(this.state.users));
+    }
+  }
 
   onToggle = id => {
     this.setState(prevState => ({
       users: prevState.users.map(user => {
-        console.log(user.id);
         if (user.id === id) {
           const following = !user.isFollowing;
           return {

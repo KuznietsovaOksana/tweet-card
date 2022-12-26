@@ -5,7 +5,6 @@ export const UserList = ({ users, onClick }) => {
   return (
     <List>
       {users.map(user => {
-        // console.log(user);
         return <User key={user.id} user={user} onClick={onClick} />;
       })}
     </List>

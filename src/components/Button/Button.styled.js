@@ -11,8 +11,7 @@ export const ButtonFollow = styled.button`
   line-height: 1.2;
   text-transform: uppercase;
   color: #373737;
-  background-color: ${({ isFollowing }) =>
-    isFollowing ? '#5CD3A8' : '#EBD8FF'};
+  background-color: #ebd8ff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   border: transparent;
