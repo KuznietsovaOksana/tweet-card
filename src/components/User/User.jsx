@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Button } from '../Button/Button';
 import {
   UserItem,
@@ -36,4 +37,13 @@ export const User = ({ user, onClick }) => {
       </UserData>
     </UserItem>
   );
+};
+
+User.propTypes = {
+  user: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    tweets: PropTypes.number.isRequired,
+    followers: PropTypes.number.isRequired,
+  }).isRequired,
+  onClick: PropTypes.func.isRequired,
 };
